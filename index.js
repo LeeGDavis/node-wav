@@ -1,4 +1,3 @@
-
 /**
  * References:
  *  - http://tools.ietf.org/html/rfc2361

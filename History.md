@@ -1,4 +1,15 @@
 
+2.0.0 / 2026-08-10
+==================
+
+  * **Breaking:** require Node.js 22.13 or newer
+  * update runtime and development dependencies
+  * migrate from Semistandard to ESLint 10 flat config with Neostandard
+  * upgrade the test suite to Mocha 12
+  * update `readable-stream` usage for v4 compatibility
+  * use native `Buffer.alloc()` and `Buffer.from()` methods
+  * replace `var` declarations with `const` and `let`
+
 1.0.0 / 2015-05-01
 ==================
 

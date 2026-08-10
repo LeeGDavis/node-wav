@@ -1,4 +1,3 @@
-
 /**
  * Pipe a WAVE file to stdin, or specify the filename as the first argument,
  * and information about the wave file will be printed out.
@@ -7,12 +6,12 @@
  *   http://www.morphet.org.uk/comp/wavtools.html
  */
 
-var fs = require('fs');
-var wav = require('../');
-var filename = process.argv[2];
+const fs = require('fs');
+const wav = require('../');
+const filename = process.argv[2];
 
-var input;
-var reader = new wav.Reader();
+let input;
+const reader = new wav.Reader();
 
 if (filename) {
   console.log('Header info for: %s', filename);
