@@ -23,12 +23,12 @@ Here's how you would play a standard PCM WAVE file out of the speakers using
 `node-wav` and `node-speaker`:
 
 ``` javascript
-var fs = require('fs');
-var wav = require('wav');
-var Speaker = require('speaker');
+import fs from 'node:fs';
+import Speaker from 'speaker';
+import { Reader } from 'wav';
 
-var file = fs.createReadStream('track01.wav');
-var reader = new wav.Reader();
+const file = fs.createReadStream('track01.wav');
+const reader = new Reader();
 
 // the "format" event gets emitted at the end of the WAVE header
 reader.on('format', function (format) {
@@ -95,18 +95,18 @@ The `FileWriter` class is, essentially, a combination of `fs.createWriteStream()
 Example usage with `mic`:
 
 ```js
-var FileWriter = require('wav').FileWriter;
-var mic = require('mic'); // requires arecord or sox, see https://www.npmjs.com/package/mic
+import mic from 'mic'; // requires arecord or sox, see https://www.npmjs.com/package/mic
+import { FileWriter } from 'wav';
 
-var micInstance = mic({
+const micInstance = mic({
   rate: '16000',
   channels: '1',
   debug: true
 });
 
-var micInputStream = micInstance.getAudioStream();
+const micInputStream = micInstance.getAudioStream();
 
-var outputFileStream = new FileWriter('./test.wav', {
+const outputFileStream = new FileWriter('./test.wav', {
   sampleRate: 16000,
   channels: 1
 });

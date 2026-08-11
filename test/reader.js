@@ -2,15 +2,14 @@
  * Module dependencies.
  */
 
-const fs = require('fs');
-const path = require('path');
-const assert = require('assert');
-const Reader = require('../').Reader;
+import assert from 'node:assert';
+import * as fs from 'node:fs';
+import { Reader } from '../index.js';
 
 describe('Reader', function () {
   describe('RIFF - Little-endian', function () {
     describe('1up.wav', function () {
-      const fixture = path.resolve(__dirname, 'fixtures', '1up.wav');
+      const fixture = new URL('fixtures/1up.wav', import.meta.url);
 
       it('should emit a "format" event', function (done) {
         const reader = new Reader();
@@ -33,7 +32,7 @@ describe('Reader', function () {
     });
 
     describe('gameover.wav', function () {
-      const fixture = path.resolve(__dirname, 'fixtures', 'gameover.wav');
+      const fixture = new URL('fixtures/gameover.wav', import.meta.url);
 
       it('should emit a "format" event', function (done) {
         const reader = new Reader();
@@ -61,7 +60,7 @@ describe('Reader', function () {
     });
 
     describe('M1F1-float32-AFsp.wav', function () {
-      const fixture = path.resolve(__dirname, 'fixtures', 'M1F1-float32-AFsp.wav');
+      const fixture = new URL('fixtures/M1F1-float32-AFsp.wav', import.meta.url);
 
       it('should emit a "format" event', function (done) {
         const reader = new Reader();
@@ -85,7 +84,7 @@ describe('Reader', function () {
     });
 
     describe('M1F1-float64-AFsp.wav', function () {
-      const fixture = path.resolve(__dirname, 'fixtures', 'M1F1-float64-AFsp.wav');
+      const fixture = new URL('fixtures/M1F1-float64-AFsp.wav', import.meta.url);
 
       it('should emit a "format" event', function (done) {
         const reader = new Reader();
@@ -111,7 +110,7 @@ describe('Reader', function () {
 
   describe('RIFX - Big-endian', function () {
     describe('gameover-rifx.wav', function () {
-      const fixture = path.resolve(__dirname, 'fixtures', 'gameover-rifx.wav');
+      const fixture = new URL('fixtures/gameover-rifx.wav', import.meta.url);
 
       it('should emit a "format" event', function (done) {
         const reader = new Reader();

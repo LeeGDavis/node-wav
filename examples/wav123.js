@@ -3,8 +3,8 @@
  * via `node-speaker`.
  */
 
-const Reader = require('../').Reader;
-const Speaker = require('speaker');
+import Speaker from 'speaker';
+import { Reader } from '../index.js';
 
 const reader = new Reader();
 

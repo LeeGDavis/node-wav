@@ -1,4 +1,11 @@
 
+3.0.0 / 2026-08-11
+==================
+
+  * **Breaking:** migrate the package from CommonJS to ESM
+  * replace `readable-stream` with Node.js's built-in `node:stream`
+  * use `LeeGDavis/node-stream-parser` v1.0.0
+
 2.0.0 / 2026-08-10
 ==================
 

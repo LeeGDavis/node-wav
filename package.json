@@ -1,7 +1,9 @@
 {
   "name": "wav",
   "description": "`Reader` and `Writer` streams for Microsoft WAVE audio files",
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "type": "module",
+  "exports": "./index.js",
   "license": "MIT",
   "author": "Nathan Rajlich <nathan@tootallnate.net>",
   "repository": "TooTallNate/node-wav",
@@ -10,8 +12,7 @@
   },
   "dependencies": {
     "debug": "^4.4.3",
-    "readable-stream": "^4.7.0",
-    "stream-parser": "^0.3.1"
+    "stream-parser": "github:LeeGDavis/node-stream-parser#v1.0.0"
   },
   "devDependencies": {
     "eslint": "^10.8.1",

@@ -6,8 +6,8 @@
  *   http://www.morphet.org.uk/comp/wavtools.html
  */
 
-const fs = require('fs');
-const wav = require('../');
+import * as fs from 'node:fs';
+import * as wav from '../index.js';
 const filename = process.argv[2];
 
 let input;
