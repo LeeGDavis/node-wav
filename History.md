@@ -1,4 +1,11 @@
 
+3.0.1 / 2026-08-17
+==================
+
+  * add TypeScript declarations for the public API
+  * export `ReaderFormat` as an alias for `WaveFormat`
+  * type-check the public declarations during tests
+
 3.0.0 / 2026-08-11
 ==================
 
